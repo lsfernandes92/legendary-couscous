@@ -7,6 +7,8 @@ ruby '3.0.3'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Gem necessary for the bootstrap styling
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+# Sophisticated and secure hash algorithm designed by The OpenBSD project for hashing passwords. 
+gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 # Use Puma as the app server
