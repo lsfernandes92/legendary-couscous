@@ -1,7 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { described_class.new(name: 'Foo name', email: 'foo@gmail.com') }
+  subject do
+    described_class.new(
+      name: 'Foo name',
+      email: 'foo@gmail.com',
+      password: 'fo0!@#5',
+      password_confirmation: 'fo0!@#5'
+    )
+  end
 
   context 'when is being creating' do
     it 'succeds with valid attributes' do
@@ -60,6 +67,11 @@ RSpec.describe User, type: :model do
       dup_user = subject.dup
       subject.save
       expect(dup_user).not_to be_valid
+    end
+
+    it 'validates password presence' do
+      subject.password = subject.password_confirmation = ' ' * 6
+      expect(subject).not_to be_valid
     end
   end
 end
