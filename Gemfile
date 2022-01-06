@@ -7,7 +7,7 @@ ruby '3.0.3'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Gem necessary for the bootstrap styling
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
-# Sophisticated and secure hash algorithm designed by The OpenBSD project for hashing passwords. 
+# Sophisticated and secure hash algorithm designed by The OpenBSD project for hashing passwords.
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
@@ -21,6 +21,8 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+# Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.
+gem 'faker', '~> 2.19'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
