@@ -13,7 +13,23 @@ User.create!(
   admin: true
 )
 
-99.times do |n|
+User.create!(
+  name: 'Admin',
+  email: 'admin@gmail.com',
+  password: 'a123456',
+  password_confirmation: 'a123456',
+  admin: true
+)
+
+User.create!(
+  name: 'Nonadmin',
+  email: 'non@gmail.com',
+  password: 'a123456',
+  password_confirmation: 'a123456',
+  admin: false
+)
+
+97.times do |n|
   User.create!(
     name: Faker::Name.name,
     email: Faker::Internet.email,
