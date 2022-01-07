@@ -10,7 +10,9 @@ User.create!(
   email: 'lsfernandes92@gmail.com',
   password: 'a123456',
   password_confirmation: 'a123456',
-  admin: true
+  admin: true,
+  activated: true,
+  activated_at: Time.zone.now
 )
 
 User.create!(
@@ -18,7 +20,9 @@ User.create!(
   email: 'admin@gmail.com',
   password: 'a123456',
   password_confirmation: 'a123456',
-  admin: true
+  admin: true,
+  activated: true,
+  activated_at: Time.zone.now
 )
 
 User.create!(
@@ -26,7 +30,9 @@ User.create!(
   email: 'non@gmail.com',
   password: 'a123456',
   password_confirmation: 'a123456',
-  admin: false
+  admin: false,
+  activated: true,
+  activated_at: Time.zone.now
 )
 
 97.times do |n|
