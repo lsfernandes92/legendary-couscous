@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "%%%% Creating admin users..."
 User.create!(
   name: 'Lucas Fernandes',
   email: 'lsfernandes92@gmail.com',
@@ -34,7 +35,8 @@ User.create!(
   activated: true,
   activated_at: Time.zone.now
 )
-
+puts "%%%% Admin users created successfully!"
+puts "%%%% Creating users without admin rights..."
 97.times do |n|
   User.create!(
     name: Faker::Name.name,
@@ -43,3 +45,12 @@ User.create!(
     password_confirmation: 'a123456'
   )
 end
+puts "%%%% Casual users created successfully!"
+
+puts "%%%% Creating microposts for first six users..."
+users = User.order(:created_at).take(6)
+50.times do
+  content = Faker::Lorem.sentence(word_count: 5)
+  users.each {|user| user.microposts.create!(content: content) }
+end
+puts "%%%% Microposts created successfully!"
