@@ -37,3 +37,6 @@ yarn-debug.log*
 
 # Ignore postgres stuffs
 /postgres/*
+
+# Ignore uploaded test images.
+/public/uploads
